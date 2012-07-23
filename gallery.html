@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+  <link href="css/skin.css" rel="stylesheet">
+</head>
+<body>
+  <script src="js/lib/mustache.js"></script>
+  <script id="lobby" type="text/template">
+    <section id="gallery_{{name}}" class="artist_gallery">
+      <h1>{{name}}</h1>
+      <ul>{{#images}}
+        <li class="piece"><img src="server/{{name}}/{{url}}" class="icon"></li>{{/images}}
+      </ul>
+    </section>
+  </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+  <script src="js/src/library.js"></script>
+  <script src="js/src/gallery.js"></script>
+</body>

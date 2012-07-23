@@ -1,0 +1,18 @@
+doctype html
+
+head
+    link(href="css/skin.css", rel="stylesheet")
+
+body
+    script(src="js/lib/mustache.js")
+    script(id="lobby", type="text/template")
+        section.artist_gallery(id="gallery_{{name}}")
+            h1 {{name}}
+            ul
+                {{#images}}
+                li.piece
+                    img.icon(src="server/{{name}}/{{url}}")
+                {{/images}}
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", type="text/javascript")
+    script(src="js/src/library.js")
+    script(src="js/src/gallery.js")
